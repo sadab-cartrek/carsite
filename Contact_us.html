@@ -28,6 +28,15 @@
     <link href="css/style_1.css" rel="stylesheet" type="text/css"/>
     <!-- Modernizr JS -->
     <script src="js/modernizr-3.5.0.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.1.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
 </head>
 <body class="single">
     <div class="container-fluid fh5co_header_bg">
@@ -101,7 +110,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false"> New Upgrades <span class="sr-only">(current)</span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                           <a class="dropdown-item" href="#">Car Performance</a>
+                           <a class="dropdown-item" href="perform.html">Car Performance</a>
                            <a class="dropdown-item" href="#">Car Gadget</a>
                             <a class="dropdown-item" href="#">Car Parts</a>
                         </div>
@@ -110,12 +119,12 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">Brands<span class="sr-only">(current)</span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="#">Mercedes-Benz</a>
-                            <a class="dropdown-item" href="#">BMW</a>
-                            <a class="dropdown-item" href="#">Porche</a>
-                            <a class="dropdown-item" href="#">Ferrari</a>
-                            <a class="dropdown-item" href="#">Tesla</a>
-                            <a class="dropdown-item" href="#">Bently</a>
+                            <a class="dropdown-item" href="https://www.mercedes-benz.com/en/" target="_blank"> Mercedes-Benz</a>
+                            <a class="dropdown-item" href="https://www.bmw.com/en/index.html"target="_blank">BMW</a>
+                            <a class="dropdown-item" href="https://www.porsche.com/pap/_bangladesh_/"target="_blank">Porche</a>
+                            <a class="dropdown-item" href="https://www.ferrari.com/en-EN"target="_blank">Ferrari</a>
+                            <a class="dropdown-item" href="https://www.tesla.com/?redirect=no"target="_blank">Tesla</a>
+                            <a class="dropdown-item" href="https://www.bentleymotors.com/en.html"target="_blank">Bently</a>
                         </div>
                     </li>
                     <li class="nav-item ">
@@ -185,20 +194,28 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
-                <form class="row" id="fh5co_contact_form">
-                    <div class="col-12 py-3">
-                        <input type="text" class="form-control fh5co_contact_text_box" placeholder="Enter Your Name" />
+                <form class="row" id="fh5co_contact_form" method="POST" action=" ">
+                    <div class="alert">Your message has been sent, Redirecting to Home</div>
+                    <div class="col-12 py-3"> <label>Name</label>
+                        <input  id="name"   type="text" class="form-control fh5co_contact_text_box" placeholder="Enter Your Name"  required="required"/>
                     </div>
-                    <div class="col-6 py-3">
-                        <input type="text" class="form-control fh5co_contact_text_box" placeholder="E-mail" />
+                    <div class="col-6 py-3"> <label>E-mail</label>
+                        <input   id="email"  type="text" class="form-control fh5co_contact_text_box" placeholder="E-mail" required="required" />
                     </div>
-                    <div class="col-6 py-3">
-                        <input type="text" class="form-control fh5co_contact_text_box" placeholder="Subject" />
+                    <div class="col-6 py-3"><label>Subject</label>
+                        <input name="message"  id="subject"  type="text" class="form-control fh5co_contact_text_box" placeholder="Subject"  required="required"/>
                     </div>
-                    <div class="col-12 py-3">
-                        <textarea class="form-control fh5co_contacts_message" placeholder="Message"></textarea>
+                    <div class="col-12 py-3"> <label>Message</label>
+                        <textarea   id="message"  class="form-control fh5co_contacts_message" placeholder="Message" required="required"></textarea>
+                        
                     </div>
-                    <div class="col-12 py-3 text-center"> <a href="#" class="btn contact_btn">Send Message</a> </div>
+                     <div>
+                     <button type="submit" class="col-12 py-3 text-center"> <a href="#" class="btn btn-primary btn-lg">Send Message</a> </button>
+                    </div>
+
+                    <div >
+                       <!--- <button type="submit" class="btn btn-primary btn-lg">Submit Message</button>-->
+                    </div>
                 </form>
             </div>
             <div class="col-12 col-md-6 align-self-center">
@@ -310,6 +327,19 @@
         crossorigin="anonymous"></script>
 <!-- Waypoints -->
 <script src="js/jquery.waypoints.min.js"></script>
+ 
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+
+
+
 <!-- Main -->
 <script src="js/main.js"></script>
 
